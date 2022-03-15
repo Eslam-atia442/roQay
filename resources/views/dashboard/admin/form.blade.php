@@ -1,17 +1,17 @@
 <div class="card-body row">
-    <div class="form-group  col-3">
+    <div class="form-group  col-4">
         <label>الاسم<span
                 class="text-danger">*</span></label>
         <input name="name" placeholder="ادخل الاسم"  value="{{ old('name', $data->name ?? '') }}" class="form-control  {{ $errors->has('name') ? 'border-danger' : '' }}" type="text"
                maxlength="255" />
     </div>
-    <div class="form-group  col-3">
+    <div class="form-group  col-4">
         <label>البريد الالكتروني<span
                 class="text-danger">*</span></label>
         <input name="email" placeholder="ادخل البريد الالكتروني"  value="{{ old('email', $data->email ?? '') }}" class="form-control  {{ $errors->has('email') ? 'border-danger' : '' }}" type="email"
                maxlength="255" />
     </div>
-    <div class="form-group  col-3">
+    <div class="form-group  col-4">
         <label>رقم الهاتف<span
                 class="text-danger">*</span></label>
         <input name="phone" placeholder="ادخل رقم الهاتف"  value="{{ old('phone', $data->phone ?? '') }}" class="form-control  {{ $errors->has('phone') ? 'border-danger' : '' }}" type="number"
