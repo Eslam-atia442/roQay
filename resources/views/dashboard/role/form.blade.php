@@ -41,7 +41,7 @@
                                     <span class="switch switch-outline switch-icon swibtn-success">
                                         <label>
                                          <input type="checkbox" value="{{$permission->name}}"
-                                                @if(request()->segment(2) == 'edit')   @php if(in_array($permission->id , $rolePermissions)) echo "checked"; @endphp  @endif name="permissions[]"/>
+                                                @if(request()->segment(3) == 'edit')   @php if(in_array($permission->id , $rolePermissions)) echo "checked"; @endphp  @endif name="permissions[]"/>
                                          <span></span>
                                         </label>
                                     </span>
@@ -59,7 +59,7 @@
 <div class="text-left">
     {{--    for avoid  edit admin permissions--}}
 
-    @if(request()->segment(2) == 'edit' && $role->id == 1)
+    @if(request()->segment(3) == 'edit' && $role->id == 1)
     @else
         <button type="Submit" id="submit" class="btn btn-success btn-default ">حفظ</button>
         <a href="{{ URL::previous() }}" class="btn btn-secondary">الغاء</a>
